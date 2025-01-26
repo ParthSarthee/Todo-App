@@ -4,19 +4,54 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-		<title>Hello</title>
+		<title>Todo App</title>
 	</head>
-	<!-- Tailwind's 1 unit = 4px -->
+
 	<body>
-		<div class="h-screen flex justify-center items-center gap-2">
-			<p class="bg-red-500 text-center text-red-50 p-1 border border-amber-500">
-				Hello
-			</p>
-			<p
-				class="bg-red-500 text-center text-red-50 p-1 shadow shadow shadow-red-500"
+		<div class="flex justify-center items-center h-screen bg-neutral-100">
+			<main
+				class="bg-white p-4 rounded border border-white shadow flex justify-center items-center flex-col gap-5"
 			>
-				Hello
-			</p>
+				<div>
+					<h1 class="text-center text-4xl text-teal-500">TODO APP</h1>
+				</div>
+				<!-- Todo List -->
+				<div class="flex flex-col gap-2" id="todo-list">
+					<div class="flex bg-teal-100 p-2 rounded gap-1">
+						<p>This is a work to be done.</p>
+						<button class="bg-cyan-600 text-cyan-100 w-6 h-6 rounded">O</button>
+						<button class="bg-rose-600 text-rose-100 w-6 h-6 rounded">X</button>
+					</div>
+					<div class="flex bg-teal-100 p-2 rounded gap-1">
+						<p>This is a work to be done.</p>
+						<button class="bg-cyan-600 text-cyan-100 w-6 h-6 rounded">O</button>
+						<button class="bg-rose-600 text-rose-100 w-6 h-6 rounded">X</button>
+					</div>
+					<div class="flex justify-between bg-teal-100 p-2 rounded gap-1">
+						<p>This is a work to be done.</p>
+						<button class="bg-cyan-600 text-cyan-100 w-6 h-6 rounded">O</button>
+						<button class="bg-rose-600 text-rose-100 w-6 h-6 rounded">X</button>
+					</div>
+				</div>
+				<!-- Todo Form -->
+				<div>
+					<form>
+						<input
+							id="todo-input"
+							class="border-2 border-teal-500 rounded p-1"
+							type="text"
+							placeholder="Enter your todos..."
+						/>
+						<button
+							id="todo-save"
+							class="bg-teal-500 rounded text-white px-4 py-1.5"
+						>
+							Save
+						</button>
+					</form>
+				</div>
+			</main>
 		</div>
+		<script src="main.js"></script>
 	</body>
 </html>
