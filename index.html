@@ -3,9 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 		<title>Hello</title>
 	</head>
+	<!-- Tailwind's 1 unit = 4px -->
 	<body>
-		Hello! This is a change.
+		<div class="h-screen flex justify-center items-center gap-2">
+			<p class="bg-red-500 text-center text-red-50 p-1 border border-amber-500">
+				Hello
+			</p>
+			<p
+				class="bg-red-500 text-center text-red-50 p-1 shadow shadow shadow-red-500"
+			>
+				Hello
+			</p>
+		</div>
 	</body>
 </html>
